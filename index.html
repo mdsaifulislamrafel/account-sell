@@ -1,0 +1,503 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Custom Loading Screen</title>
+    <!-- custom css lick -->
+    <link rel="stylesheet" href="./style.css">
+    <!-- cdn link -->
+    <link rel="shortcut icon" href="./images/logo.png" type="image/x-icon">
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.10/dist/full.min.css" rel="stylesheet" type="text/css" />
+
+</head>
+
+<body>
+    <!-- Loader Section -->
+    <div id="loader">
+        <div class="dots">
+            <div class="dot"></div>
+            <div class="dot"></div>
+            <div class="dot"></div>
+            <div class="dot"></div>
+        </div>
+        <p class="loading-text">Loading <span class="dots-animation">...</span></p>
+    </div>
+    <!-- Loader Section -->
+
+    <!-- Content Section -->
+    <!-- header section -->
+    <header id="navbar" style="display: none;">
+        <div class="w-full bg-base-200 fixed top-0 left-0 right-0 z-50">
+            <div class="navbar w-[90%] mx-auto">
+                <div class="navbar-start">
+                    <img src="./images/logo.png" class="w-16 h-16 rounded-full" alt="Logo">
+                </div>
+                <!-- desktop menu -->
+                <div class="navbar-center hidden lg:flex">
+                    <ul class="menu menu-horizontal px-1">
+                        <li><a>Home</a></li>
+                        <li>
+                            <details>
+                                <summary>Parent</summary>
+                                <ul class="p-2">
+                                    <li><a>Submenu 1</a></li>
+                                    <li><a>Submenu 2</a></li>
+                                </ul>
+                            </details>
+                        </li>
+                        <li><a>Item 3</a></li>
+                    </ul>
+                </div>
+                <div class="navbar-end">
+                    <a class="btn btn-primary">Button</a>
+                    <div class="dropdown">
+                        <div tabindex="0" role="button" class="btn btn-ghost lg:hidden">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24"
+                                stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M4 6h16M4 12h8m-8 6h16" />
+                            </svg>
+                        </div>
+                        <!-- mobile menu -->
+                        <ul tabindex="0"
+                            class="menu menu-sm dropdown-content bg-base-100 rounded-box z-[1] mt-3 w-52 p-2 shadow right-0 origin-top-right">
+                            <li><a>Home</a></li>
+                            <li>
+                                <a>Parent</a>
+                                <ul class="p-2">
+                                    <li><a>Submenu 1</a></li>
+                                    <li><a>Submenu 2</a></li>
+                                </ul>
+                            </li>
+                            <li><a>Item 3</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+    
+    <!-- header section -->
+    <main id="content" style="display: none;"  class="min-h-[calc(100vh-264px)] mt-[80px]">
+        <section>
+            <div class="overflow-x-auto">
+                <table class="table">
+                    <!-- head -->
+                    <thead class="bg-slate-800 text-white">
+                        <tr>
+                            <th class="text-sm">Softregs</th>
+                            <th class="text-sm">In stock <i class="fa-solid fa-arrow-down-up-across-line"></i></th>
+                            <th></th>
+                            <th class="text-sm">Price <i class="fa-solid fa-arrow-up-wide-short"></i></th>
+                            <th></th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <!-- row 1 -->
+                        <tr>
+                            <td>
+                                <div class="flex items-center gap-3">
+                                    <div class="avatar">
+                                        <div class="mask mask-squircle h-12 w-12">
+                                            <img src="https://img.daisyui.com/images/profile/demo/2@94.webp"
+                                                alt="Avatar Tailwind CSS Component" />
+                                        </div>
+                                    </div>
+                                    <div>
+                                        <div class="font-bold text-sm">Hart Hagerty Lorem ipsum dolor sit amet,
+                                            consectetur adipisicing elit. Maxime, illum! Lorem ipsum dolor sit amet,
+                                            consectetur adipisicing elit. Reprehenderit, ipsa?</div>
+                                    </div>
+                                </div>
+                            </td>
+                            <td class="text-center">
+                                0 pcs.
+                            </td>
+                            <td class="text-sm font-bold text-center">
+                                Price per pc
+                            </td>
+                            <td class="text-center">from $0,093</td>
+                            <th>
+                                <!-- <button class="btn bg-teal-400 btn-ghost btn-xs">Buy</button> -->
+                                <div data-tooltip="Price:-$20" class="button">
+                                    <div class="button-wrapper">
+                                        <div class="text flex gap-1"><i class="fa-solid fa-cart-arrow-down"></i> Buy Now
+                                        </div>
+                                        <span class="icon">
+                                            <svg viewBox="0 0 16 16" class="bi bi-cart2" fill="currentColor" height="16"
+                                                width="16" xmlns="http://www.w3.org/2000/svg">
+                                                <path
+                                                    d="M0 2.5A.5.5 0 0 1 .5 2H2a.5.5 0 0 1 .485.379L2.89 4H14.5a.5.5 0 0 1 .485.621l-1.5 6A.5.5 0 0 1 13 11H4a.5.5 0 0 1-.485-.379L1.61 3H.5a.5.5 0 0 1-.5-.5zM3.14 5l1.25 5h8.22l1.25-5H3.14zM5 13a1 1 0 1 0 0 2 1 1 0 0 0 0-2zm-2 1a2 2 0 1 1 4 0 2 2 0 0 1-4 0zm9-1a1 1 0 1 0 0 2 1 1 0 0 0 0-2zm-2 1a2 2 0 1 1 4 0 2 2 0 0 1-4 0z">
+                                                </path>
+                                            </svg>
+                                        </span>
+                                    </div>
+                                </div>
+                            </th>
+                        </tr>
+                        <tr>
+                            <td>
+                                <div class="flex items-center gap-3">
+                                    <div class="avatar">
+                                        <div class="mask mask-squircle h-12 w-12">
+                                            <img src="https://img.daisyui.com/images/profile/demo/2@94.webp"
+                                                alt="Avatar Tailwind CSS Component" />
+                                        </div>
+                                    </div>
+                                    <div>
+                                        <div class="font-bold text-sm">Hart Hagerty Lorem ipsum dolor sit amet,
+                                            consectetur adipisicing elit. Maxime, illum! Lorem ipsum dolor sit amet,
+                                            consectetur adipisicing elit. Reprehenderit, ipsa?</div>
+                                    </div>
+                                </div>
+                            </td>
+                            <td class="text-center">
+                                0 pcs.
+                            </td>
+                            <td class="text-sm font-bold text-center">
+                                Price per pc
+                            </td>
+                            <td class="text-center">from $0,093</td>
+                            <th>
+                                <!-- <button class="btn bg-teal-400 btn-ghost btn-xs">Buy</button> -->
+                                <div data-tooltip="Price:-$20" class="button">
+                                    <div class="button-wrapper">
+                                        <div class="text flex gap-1"><i class="fa-solid fa-cart-arrow-down"></i> Buy Now
+                                        </div>
+                                        <span class="icon">
+                                            <svg viewBox="0 0 16 16" class="bi bi-cart2" fill="currentColor" height="16"
+                                                width="16" xmlns="http://www.w3.org/2000/svg">
+                                                <path
+                                                    d="M0 2.5A.5.5 0 0 1 .5 2H2a.5.5 0 0 1 .485.379L2.89 4H14.5a.5.5 0 0 1 .485.621l-1.5 6A.5.5 0 0 1 13 11H4a.5.5 0 0 1-.485-.379L1.61 3H.5a.5.5 0 0 1-.5-.5zM3.14 5l1.25 5h8.22l1.25-5H3.14zM5 13a1 1 0 1 0 0 2 1 1 0 0 0 0-2zm-2 1a2 2 0 1 1 4 0 2 2 0 0 1-4 0zm9-1a1 1 0 1 0 0 2 1 1 0 0 0 0-2zm-2 1a2 2 0 1 1 4 0 2 2 0 0 1-4 0z">
+                                                </path>
+                                            </svg>
+                                        </span>
+                                    </div>
+                                </div>
+                            </th>
+                        </tr>
+                        <tr>
+                            <td>
+                                <div class="flex items-center gap-3">
+                                    <div class="avatar">
+                                        <div class="mask mask-squircle h-12 w-12">
+                                            <img src="https://img.daisyui.com/images/profile/demo/2@94.webp"
+                                                alt="Avatar Tailwind CSS Component" />
+                                        </div>
+                                    </div>
+                                    <div>
+                                        <div class="font-bold text-sm">Hart Hagerty Lorem ipsum dolor sit amet,
+                                            consectetur adipisicing elit. Maxime, illum! Lorem ipsum dolor sit amet,
+                                            consectetur adipisicing elit. Reprehenderit, ipsa?</div>
+                                    </div>
+                                </div>
+                            </td>
+                            <td class="text-center">
+                                0 pcs.
+                            </td>
+                            <td class="text-sm font-bold text-center">
+                                Price per pc
+                            </td>
+                            <td class="text-center">from $0,093</td>
+                            <th>
+                                <!-- <button class="btn bg-teal-400 btn-ghost btn-xs">Buy</button> -->
+                                <div data-tooltip="Price:-$20" class="button">
+                                    <div class="button-wrapper">
+                                        <div class="text flex gap-1"><i class="fa-solid fa-cart-arrow-down"></i> Buy Now
+                                        </div>
+                                        <span class="icon">
+                                            <svg viewBox="0 0 16 16" class="bi bi-cart2" fill="currentColor" height="16"
+                                                width="16" xmlns="http://www.w3.org/2000/svg">
+                                                <path
+                                                    d="M0 2.5A.5.5 0 0 1 .5 2H2a.5.5 0 0 1 .485.379L2.89 4H14.5a.5.5 0 0 1 .485.621l-1.5 6A.5.5 0 0 1 13 11H4a.5.5 0 0 1-.485-.379L1.61 3H.5a.5.5 0 0 1-.5-.5zM3.14 5l1.25 5h8.22l1.25-5H3.14zM5 13a1 1 0 1 0 0 2 1 1 0 0 0 0-2zm-2 1a2 2 0 1 1 4 0 2 2 0 0 1-4 0zm9-1a1 1 0 1 0 0 2 1 1 0 0 0 0-2zm-2 1a2 2 0 1 1 4 0 2 2 0 0 1-4 0z">
+                                                </path>
+                                            </svg>
+                                        </span>
+                                    </div>
+                                </div>
+                            </th>
+                        </tr>
+                        <tr>
+                            <td>
+                                <div class="flex items-center gap-3">
+                                    <div class="avatar">
+                                        <div class="mask mask-squircle h-12 w-12">
+                                            <img src="https://img.daisyui.com/images/profile/demo/2@94.webp"
+                                                alt="Avatar Tailwind CSS Component" />
+                                        </div>
+                                    </div>
+                                    <div>
+                                        <div class="font-bold text-sm">Hart Hagerty Lorem ipsum dolor sit amet,
+                                            consectetur adipisicing elit. Maxime, illum! Lorem ipsum dolor sit amet,
+                                            consectetur adipisicing elit. Reprehenderit, ipsa?</div>
+                                    </div>
+                                </div>
+                            </td>
+                            <td class="text-center">
+                                0 pcs.
+                            </td>
+                            <td class="text-sm font-bold text-center">
+                                Price per pc
+                            </td>
+                            <td class="text-center">from $0,093</td>
+                            <th>
+                                <!-- <button class="btn bg-teal-400 btn-ghost btn-xs">Buy</button> -->
+                                <div data-tooltip="Price:-$20" class="button">
+                                    <div class="button-wrapper">
+                                        <div class="text flex gap-1"><i class="fa-solid fa-cart-arrow-down"></i> Buy Now
+                                        </div>
+                                        <span class="icon">
+                                            <svg viewBox="0 0 16 16" class="bi bi-cart2" fill="currentColor" height="16"
+                                                width="16" xmlns="http://www.w3.org/2000/svg">
+                                                <path
+                                                    d="M0 2.5A.5.5 0 0 1 .5 2H2a.5.5 0 0 1 .485.379L2.89 4H14.5a.5.5 0 0 1 .485.621l-1.5 6A.5.5 0 0 1 13 11H4a.5.5 0 0 1-.485-.379L1.61 3H.5a.5.5 0 0 1-.5-.5zM3.14 5l1.25 5h8.22l1.25-5H3.14zM5 13a1 1 0 1 0 0 2 1 1 0 0 0 0-2zm-2 1a2 2 0 1 1 4 0 2 2 0 0 1-4 0zm9-1a1 1 0 1 0 0 2 1 1 0 0 0 0-2zm-2 1a2 2 0 1 1 4 0 2 2 0 0 1-4 0z">
+                                                </path>
+                                            </svg>
+                                        </span>
+                                    </div>
+                                </div>
+                            </th>
+                        </tr>
+                        <tr>
+                            <td>
+                                <div class="flex items-center gap-3">
+                                    <div class="avatar">
+                                        <div class="mask mask-squircle h-12 w-12">
+                                            <img src="https://img.daisyui.com/images/profile/demo/2@94.webp"
+                                                alt="Avatar Tailwind CSS Component" />
+                                        </div>
+                                    </div>
+                                    <div>
+                                        <div class="font-bold text-sm">Hart Hagerty Lorem ipsum dolor sit amet,
+                                            consectetur adipisicing elit. Maxime, illum! Lorem ipsum dolor sit amet,
+                                            consectetur adipisicing elit. Reprehenderit, ipsa?</div>
+                                    </div>
+                                </div>
+                            </td>
+                            <td class="text-center">
+                                0 pcs.
+                            </td>
+                            <td class="text-sm font-bold text-center">
+                                Price per pc
+                            </td>
+                            <td class="text-center">from $0,093</td>
+                            <th>
+                                <!-- <button class="btn bg-teal-400 btn-ghost btn-xs">Buy</button> -->
+                                <div data-tooltip="Price:-$20" class="button">
+                                    <div class="button-wrapper">
+                                        <div class="text flex gap-1"><i class="fa-solid fa-cart-arrow-down"></i> Buy Now
+                                        </div>
+                                        <span class="icon">
+                                            <svg viewBox="0 0 16 16" class="bi bi-cart2" fill="currentColor" height="16"
+                                                width="16" xmlns="http://www.w3.org/2000/svg">
+                                                <path
+                                                    d="M0 2.5A.5.5 0 0 1 .5 2H2a.5.5 0 0 1 .485.379L2.89 4H14.5a.5.5 0 0 1 .485.621l-1.5 6A.5.5 0 0 1 13 11H4a.5.5 0 0 1-.485-.379L1.61 3H.5a.5.5 0 0 1-.5-.5zM3.14 5l1.25 5h8.22l1.25-5H3.14zM5 13a1 1 0 1 0 0 2 1 1 0 0 0 0-2zm-2 1a2 2 0 1 1 4 0 2 2 0 0 1-4 0zm9-1a1 1 0 1 0 0 2 1 1 0 0 0 0-2zm-2 1a2 2 0 1 1 4 0 2 2 0 0 1-4 0z">
+                                                </path>
+                                            </svg>
+                                        </span>
+                                    </div>
+                                </div>
+                            </th>
+                        </tr>
+                        <tr>
+                            <td>
+                                <div class="flex items-center gap-3">
+                                    <div class="avatar">
+                                        <div class="mask mask-squircle h-12 w-12">
+                                            <img src="https://img.daisyui.com/images/profile/demo/2@94.webp"
+                                                alt="Avatar Tailwind CSS Component" />
+                                        </div>
+                                    </div>
+                                    <div>
+                                        <div class="font-bold text-sm">Hart Hagerty Lorem ipsum dolor sit amet,
+                                            consectetur adipisicing elit. Maxime, illum! Lorem ipsum dolor sit amet,
+                                            consectetur adipisicing elit. Reprehenderit, ipsa?</div>
+                                    </div>
+                                </div>
+                            </td>
+                            <td class="text-center">
+                                0 pcs.
+                            </td>
+                            <td class="text-sm font-bold text-center">
+                                Price per pc
+                            </td>
+                            <td class="text-center">from $0,093</td>
+                            <th>
+                                <!-- <button class="btn bg-teal-400 btn-ghost btn-xs">Buy</button> -->
+                                <div data-tooltip="Price:-$20" class="button">
+                                    <div class="button-wrapper">
+                                        <div class="text flex gap-1"><i class="fa-solid fa-cart-arrow-down"></i> Buy Now
+                                        </div>
+                                        <span class="icon">
+                                            <svg viewBox="0 0 16 16" class="bi bi-cart2" fill="currentColor" height="16"
+                                                width="16" xmlns="http://www.w3.org/2000/svg">
+                                                <path
+                                                    d="M0 2.5A.5.5 0 0 1 .5 2H2a.5.5 0 0 1 .485.379L2.89 4H14.5a.5.5 0 0 1 .485.621l-1.5 6A.5.5 0 0 1 13 11H4a.5.5 0 0 1-.485-.379L1.61 3H.5a.5.5 0 0 1-.5-.5zM3.14 5l1.25 5h8.22l1.25-5H3.14zM5 13a1 1 0 1 0 0 2 1 1 0 0 0 0-2zm-2 1a2 2 0 1 1 4 0 2 2 0 0 1-4 0zm9-1a1 1 0 1 0 0 2 1 1 0 0 0 0-2zm-2 1a2 2 0 1 1 4 0 2 2 0 0 1-4 0z">
+                                                </path>
+                                            </svg>
+                                        </span>
+                                    </div>
+                                </div>
+                            </th>
+                        </tr>
+                        <tr>
+                            <td>
+                                <div class="flex items-center gap-3">
+                                    <div class="avatar">
+                                        <div class="mask mask-squircle h-12 w-12">
+                                            <img src="https://img.daisyui.com/images/profile/demo/2@94.webp"
+                                                alt="Avatar Tailwind CSS Component" />
+                                        </div>
+                                    </div>
+                                    <div>
+                                        <div class="font-bold text-sm">Hart Hagerty Lorem ipsum dolor sit amet,
+                                            consectetur adipisicing elit. Maxime, illum! Lorem ipsum dolor sit amet,
+                                            consectetur adipisicing elit. Reprehenderit, ipsa?</div>
+                                    </div>
+                                </div>
+                            </td>
+                            <td class="text-center">
+                                0 pcs.
+                            </td>
+                            <td class="text-sm font-bold text-center">
+                                Price per pc
+                            </td>
+                            <td class="text-center">from $0,093</td>
+                            <th>
+                                <!-- <button class="btn bg-teal-400 btn-ghost btn-xs">Buy</button> -->
+                                <div data-tooltip="Price:-$20" class="button">
+                                    <div class="button-wrapper">
+                                        <div class="text flex gap-1"><i class="fa-solid fa-cart-arrow-down"></i> Buy Now
+                                        </div>
+                                        <span class="icon">
+                                            <svg viewBox="0 0 16 16" class="bi bi-cart2" fill="currentColor" height="16"
+                                                width="16" xmlns="http://www.w3.org/2000/svg">
+                                                <path
+                                                    d="M0 2.5A.5.5 0 0 1 .5 2H2a.5.5 0 0 1 .485.379L2.89 4H14.5a.5.5 0 0 1 .485.621l-1.5 6A.5.5 0 0 1 13 11H4a.5.5 0 0 1-.485-.379L1.61 3H.5a.5.5 0 0 1-.5-.5zM3.14 5l1.25 5h8.22l1.25-5H3.14zM5 13a1 1 0 1 0 0 2 1 1 0 0 0 0-2zm-2 1a2 2 0 1 1 4 0 2 2 0 0 1-4 0zm9-1a1 1 0 1 0 0 2 1 1 0 0 0 0-2zm-2 1a2 2 0 1 1 4 0 2 2 0 0 1-4 0z">
+                                                </path>
+                                            </svg>
+                                        </span>
+                                    </div>
+                                </div>
+                            </th>
+                        </tr>
+                        <tr>
+                            <td>
+                                <div class="flex items-center gap-3">
+                                    <div class="avatar">
+                                        <div class="mask mask-squircle h-12 w-12">
+                                            <img src="https://img.daisyui.com/images/profile/demo/2@94.webp"
+                                                alt="Avatar Tailwind CSS Component" />
+                                        </div>
+                                    </div>
+                                    <div>
+                                        <div class="font-bold text-sm">Hart Hagerty Lorem ipsum dolor sit amet,
+                                            consectetur adipisicing elit. Maxime, illum! Lorem ipsum dolor sit amet,
+                                            consectetur adipisicing elit. Reprehenderit, ipsa?</div>
+                                    </div>
+                                </div>
+                            </td>
+                            <td class="text-center">
+                                0 pcs.
+                            </td>
+                            <td class="text-sm font-bold text-center">
+                                Price per pc
+                            </td>
+                            <td class="text-center">from $0,093</td>
+                            <th>
+                                <!-- <button class="btn bg-teal-400 btn-ghost btn-xs">Buy</button> -->
+                                <div data-tooltip="Price:-$20" class="button">
+                                    <div class="button-wrapper">
+                                        <div class="text flex gap-1"><i class="fa-solid fa-cart-arrow-down"></i> Buy Now
+                                        </div>
+                                        <span class="icon">
+                                            <svg viewBox="0 0 16 16" class="bi bi-cart2" fill="currentColor" height="16"
+                                                width="16" xmlns="http://www.w3.org/2000/svg">
+                                                <path
+                                                    d="M0 2.5A.5.5 0 0 1 .5 2H2a.5.5 0 0 1 .485.379L2.89 4H14.5a.5.5 0 0 1 .485.621l-1.5 6A.5.5 0 0 1 13 11H4a.5.5 0 0 1-.485-.379L1.61 3H.5a.5.5 0 0 1-.5-.5zM3.14 5l1.25 5h8.22l1.25-5H3.14zM5 13a1 1 0 1 0 0 2 1 1 0 0 0 0-2zm-2 1a2 2 0 1 1 4 0 2 2 0 0 1-4 0zm9-1a1 1 0 1 0 0 2 1 1 0 0 0 0-2zm-2 1a2 2 0 1 1 4 0 2 2 0 0 1-4 0z">
+                                                </path>
+                                            </svg>
+                                        </span>
+                                    </div>
+                                </div>
+                            </th>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+
+    </main>
+    <!-- Footer Section -->
+    <footer id="footer" style="display: none;" class="bg-gray-800 text-white">
+        <!-- Upper Footer Section -->
+        <div class="bg-gray-800  py-4">
+            <div class="w-[90%] mx-auto px-4 flex flex-wrap justify-between items-center text-sm">
+                <!-- Logo and Social Media Links -->
+                <div class="flex items-center space-x-2">
+                    <!-- Logo -->
+                    <div class="flex items-center space-x-1">
+                        <div class="bg-red-600 px-2 py-1 rounded font-bold">ACCS</div>
+                        <span class="font-medium">market.com</span>
+                    </div>
+                    <!-- Navigation Links -->
+                    <div class="hidden md:flex space-x-4 ml-8">
+                        <a href="#" class="text-gray-400 hover:text-white">Shop</a>
+                        <a href="#" class="text-gray-400 hover:text-white">Useful information</a>
+                        <a href="#" class="text-gray-400 hover:text-white">Rules</a>
+                    </div>
+                </div>
+                <!-- Action Links -->
+                <div class="flex items-center space-x-4 mt-4 md:mt-0">
+                    <a href="#" class="text-yellow-400 hover:text-yellow-500">Sell Account</a>
+                    <a href="#" class="text-green-500 hover:text-green-600">@accsmarket</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Middle Support Section -->
+        <div class="bg-gray-100 py-4">
+            <div class="w-[90%] mx-auto px-4 flex flex-col md:flex-row justify-between items-center text-sm text-black">
+                <!-- Support Button -->
+                <div class="flex items-center space-x-2">
+                    <div class="bg-gray-500 text-white rounded-full p-2">
+                        <!-- Replace with appropriate icon -->
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24"
+                            stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M13 16h-1v-4h-1m0-4h.01M12 14v-4m0 0v-4m0 4h1m-1 4v1m0-5h.01M15.228 5.732A2 2 0 0014 4H9a2 2 0 00-1.228.732L7.06 6H6a2 2 0 00-2 2v2.18l.24 1.202A2 2 0 006 13h12a2 2 0 001.76-1.619L20 10.18V8a2 2 0 00-2-2h-1.06l-.712-.268A2 2 0 0015.228 5.732z" />
+                        </svg>
+                    </div>
+                    <span>Support:</span>
+                    <a href="#" class="bg-gray-800 text-white px-4 py-2 rounded hover:bg-gray-700 ml-2">New ticket / Ask
+                        a question</a>
+                </div>
+                <!-- Footer Links -->
+                <div class="flex space-x-4 mt-4 md:mt-0">
+                    <a href="#" class="text-gray-700 hover:text-black">Sitemap</a>
+                    <a href="#" class="text-gray-700 hover:text-black">Information for EU citizens</a>
+                    <a href="#" class="text-gray-700 hover:text-black">Public offer</a>
+                    <a href="#" class="text-gray-700 hover:text-black">Privacy policy</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Lower Footer Section -->
+        <div class="bg-gray-900 py-4">
+            <div class="w-[90%] mx-auto px-4 flex flex-col md:flex-row justify-between items-center text-sm">
+                <p class="text-gray-400">All rights reserved. Copying is prohibited!</p>
+
+                <p class="mt-4 md:mt-0 text-gray-400">&copy; 2024</p>
+            </div>
+        </div>
+    </footer>
+<!-- custom js link -->
+    <script src="script.js"></script>
+    <!-- cdn js link -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://kit.fontawesome.com/dd049e1eb4.js" crossorigin="anonymous"></script>
+</body>
+
+</html>
