@@ -1,6 +1,6 @@
 
 window.addEventListener('load', function() {
-    setTimeout(function() {
+    // setTimeout(function() {
         var loader = document.getElementById('loader');
         var navbar = document.getElementById('navbar');
         var content = document.getElementById('content');
@@ -11,7 +11,7 @@ window.addEventListener('load', function() {
         navbar.style.display = 'block'; 
         content.style.display = 'block'; 
         footer.style.display = 'block'; 
-    }, 5000); // 5000 milliseconds = 5 seconds
+    // }, 5000); // 5000 milliseconds = 5 seconds
 });
 
 
