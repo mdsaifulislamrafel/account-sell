@@ -10,6 +10,7 @@
     <!-- cdn link -->
     <link rel="shortcut icon" href="./images/logo.png" type="image/x-icon">
     <link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.10/dist/full.min.css" rel="stylesheet" type="text/css" />
+    <link href="https://cdn.jsdelivr.net/npm/flowbite@2.5.1/dist/flowbite.min.css" rel="stylesheet" />
 
 </head>
 
@@ -80,8 +81,48 @@
     </header>
 
     <!-- header section -->
-    <main id="content" style="display: none;" class="min-h-[calc(100vh-264px)] mt-[80px] w-[90%] mx-auto">
-        <section>
+    <main id="content" style="display: none;" class="min-h-[calc(100vh-264px)] mt-[80px] ">
+        <!-- search section -->
+        <section class="md:p-6 bg-white shadow-md rounded-lg my-10">
+            <div class="w-[90%] mx-auto flex justify-between items-center md:space-x-8">
+
+                <!-- Left Side (ACCS and market.com) -->
+                <div class="flex items-center space-x-2 hidden md:flex">
+                    <button class="bg-red-600 text-white font-bold px-4 py-2 rounded-lg">ACCS</button>
+                    <span class="text-gray-700 text-lg font-medium">market.com</span>
+                </div>
+
+                <select
+                    class="select select-bordered bg-green-500 text-white w-full md:w-fit transition-all duration-300 ease-in-out">
+                    <option disabled selected>Select a category</option>
+                    <option>Han Solo</option>
+                    <option>Greedo</option>
+                </select>
+
+                <!-- Right Side (Search and Advanced Search) -->
+                <div class="md:flex hidden md:items-center md:space-x-2 md:w-full">
+
+                    <!-- Search Bar -->
+                    <div class="relative hidden md:flex w-full join">
+                        <input type="text"
+                            class="border border-gray-300 pl-10 pr-4 py-2 w-full focus:outline-none focus:ring-2 focus:ring-green-500"
+                            placeholder="Search for accounts">
+                        <svg class="w-5 h-5 text-gray-400 absolute left-3 top-3" xmlns="http://www.w3.org/2000/svg"
+                            fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M15 11a4 4 0 11-8 0 4 4 0 018 0z" />
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M22 22l-6-6" />
+                        </svg>
+                        <button class="bg-green-500 w-[200px] text-sm text-white px-4 py-2">Advanced search</button>
+                    </div>
+
+                </div>
+
+            </div>
+        </section>
+
+        <!-- item section -->
+        <section class="w-[90%] mx-auto">
             <!-- heading -->
             <div class="bg-slate-800 rounded-md">
                 <div class="flex flex-col md:flex-row text-white p-4 md:w-[90%]">
@@ -97,29 +138,67 @@
             </div>
             <!--Table item 1 -->
             <div>
-                <!-- Desktop-specific view -->
+                <!-- Desktop modal -->
                 <div class="hidden md:flex bg-slate-200 p-4 mt-2 items-center justify-between">
                     <div class="flex items-center md:w-[55%] gap-4">
                         <img class="w-10 h-10"
                             src="https://e7.pngegg.com/pngimages/991/568/png-clipart-facebook-logo-computer-icons-facebook-logo-facebook-thumbnail.png"
                             alt="facebook logo">
                         <p class="text-justify">FB Accounts | Verified by e-mail, there is no email in the set. Sex can
-                            be
-                            both male and female. Cookies are included. Accounts are registered in IP addresses of
-                            different
+                            be both male and
+                            female. Cookies are included. Accounts are registered in IP addresses of different
                             countries.</p>
                     </div>
                     <div class="flex items-center md:gap-12">
                         <p>0 pcs.</p>
                         <p>Price per pc</p>
                         <p>from $0.093</p>
-                        <button class="btn bg-green-500 text-white px-4 py-2">
-                            <i class="fa-solid fa-cart-arrow-down"></i> Buy
-                        </button>
+                        <button class="btn bg-green-500 text-white" onclick="my_modal_3.showModal()"><i
+                                class="fa-solid fa-cart-arrow-down"></i> Buy</button>
+                        <dialog id="my_modal_3" class="modal">
+                            <div class="modal-box">
+                                <form method="dialog">
+                                    <button class="btn btn-sm btn-circle btn-ghost absolute right-2 top-2">✕</button>
+                                </form>
+                                <div>
+                                    <form action="" class="max-w-lg mx-auto p-6 bg-white shadow-md rounded-lg">
+                                        <h2 class="text-lg font-medium text-gray-900">Checkout</h2>
+                                        <div class="mb-4 flex gap-1 items-center">
+                                            <label for="name"
+                                                class="block text-sm font-medium text-gray-700">Name:</label>
+                                            <input type="text" id="name" name="name" required
+                                                placeholder="Enter your name"
+                                                class="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-blue-500 focus:border-blue-500 sm:text-sm">
+                                        </div>
+
+                                        <div class="mb-4 flex gap-1 items-center">
+                                            <label for="quantity"
+                                                class="block text-sm font-medium text-gray-700">Quantity:</label>
+                                            <input type="number" id="quantity" name="quantity" min="1" max="1000"
+                                                value="1"
+                                                class="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-blue-500 focus:border-blue-500 sm:text-sm">
+                                        </div>
+
+                                        <div class="mb-4 flex gap-1 items-center">
+                                            <label for="email"
+                                                class="block text-sm font-medium text-gray-700">Email:</label>
+                                            <input type="email" id="email" name="email" required
+                                                placeholder="Enter your email"
+                                                class="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-blue-500 focus:border-blue-500 sm:text-sm">
+                                        </div>
+
+                                        <button type="submit"
+                                            class="w-full px-4 py-2 bg-blue-600 text-white font-medium rounded-md hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500">
+                                            Submit
+                                        </button>
+                                    </form>
+                                </div>
+                            </div>
+                        </dialog>
                     </div>
                 </div>
 
-                <!-- Mobile-specific view (only visible on mobile) -->
+                <!-- Mobile view -->
                 <div class="block md:hidden bg-white shadow-md p-4 mt-2">
                     <div class="flex items-center justify-between">
                         <img class="w-10 h-10"
@@ -127,9 +206,7 @@
                             alt="facebook logo" />
                         <div class="flex-1 flex-col">
                             <p class="text-justify text-sm">FB Accounts | Verified by e-mail, there is no email in the
-                                set. Sex
-                                can
-                                be
+                                set. Sex can be
                                 both male and female. Cookies are included. Accounts are registered in IP addresses of
                                 different
                                 countries.</p>
@@ -137,61 +214,54 @@
                     </div>
                     <div class="flex justify-between items-center mt-4">
                         <p>19,370 pcs.</p>
-                        <p>Price per pc from $0.148</p>
-                        <button class="btn bg-green-500 text-white px-4 py-2">
-                            <i class="fa-solid fa-cart-arrow-down"></i> Buy
-                        </button>
-                    </div>
-                </div>
-            </div>
-            <!--Table item 2 -->
-            <div>
-                <!-- Desktop-specific view -->
-                <div class="hidden md:flex bg-slate-200 p-4 mt-2 items-center justify-between">
-                    <div class="flex items-center md:w-[55%] gap-4">
-                        <img class="w-10 h-10"
-                            src="https://e7.pngegg.com/pngimages/991/568/png-clipart-facebook-logo-computer-icons-facebook-logo-facebook-thumbnail.png"
-                            alt="facebook logo">
-                        <p class="text-justify">FB Accounts | Verified by e-mail, there is no email in the set. Sex can
-                            be
-                            both male and female. Cookies are included. Accounts are registered in IP addresses of
-                            different
-                            countries.</p>
-                    </div>
-                    <div class="flex items-center md:gap-12">
-                        <p>0 pcs.</p>
                         <p>Price per pc</p>
                         <p>from $0.093</p>
-                        <button class="btn bg-green-500 text-white px-4 py-2">
+                        <button class="btn bg-green-500 text-white px-4 py-2" onclick="mobile_modal.showModal()">
                             <i class="fa-solid fa-cart-arrow-down"></i> Buy
                         </button>
+                        <dialog id="mobile_modal" class="modal">
+                            <div class="modal-box">
+                                <form method="dialog">
+                                    <button class="btn btn-sm btn-circle btn-ghost absolute right-2 top-2">✕</button>
+                                </form>
+                                <div>
+                                    <form action="" class="max-w-lg mx-auto p-6 bg-white shadow-md rounded-lg">
+                                        <h2 class="text-lg font-medium text-gray-900">Checkout</h2>
+                                        <div class="mb-4 flex gap-1 items-center">
+                                            <label for="name_mobile"
+                                                class="block text-sm font-medium text-gray-700">Name:</label>
+                                            <input type="text" id="name_mobile" name="name" required
+                                                placeholder="Enter your name"
+                                                class="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-blue-500 focus:border-blue-500 sm:text-sm">
+                                        </div>
+
+                                        <div class="mb-4 flex gap-1 items-center">
+                                            <label for="quantity_mobile"
+                                                class="block text-sm font-medium text-gray-700">Quantity:</label>
+                                            <input type="number" id="quantity_mobile" name="quantity" min="1" max="1000"
+                                                value="1"
+                                                class="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-blue-500 focus:border-blue-500 sm:text-sm">
+                                        </div>
+
+                                        <div class="mb-4 flex gap-1 items-center">
+                                            <label for="email_mobile"
+                                                class="block text-sm font-medium text-gray-700">Email:</label>
+                                            <input type="email" id="email_mobile" name="email" required
+                                                placeholder="Enter your email"
+                                                class="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-blue-500 focus:border-blue-500 sm:text-sm">
+                                        </div>
+
+                                        <button type="submit"
+                                            class="w-full px-4 py-2 bg-blue-600 text-white font-medium rounded-md hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500">
+                                            Submit
+                                        </button>
+                                    </form>
+                                </div>
+                            </div>
+                        </dialog>
                     </div>
                 </div>
 
-                <!-- Mobile-specific view (only visible on mobile) -->
-                <div class="block md:hidden bg-white shadow-md p-4 mt-2">
-                    <div class="flex items-center justify-between">
-                        <img class="w-10 h-10"
-                            src="https://e7.pngegg.com/pngimages/991/568/png-clipart-facebook-logo-computer-icons-facebook-logo-facebook-thumbnail.png"
-                            alt="facebook logo" />
-                        <div class="flex-1 flex-col">
-                            <p class="text-justify text-sm">FB Accounts | Verified by e-mail, there is no email in the
-                                set. Sex
-                                can
-                                be
-                                both male and female. Cookies are included. Accounts are registered in IP addresses of
-                                different
-                                countries.</p>
-                        </div>
-                    </div>
-                    <div class="flex justify-between items-center mt-4">
-                        <p>19,370 pcs.</p>
-                        <p>Price per pc from $0.148</p>
-                        <button class="btn bg-green-500 text-white px-4 py-2">
-                            <i class="fa-solid fa-cart-arrow-down"></i> Buy
-                        </button>
-                    </div>
-                </div>
             </div>
         </section>
 
@@ -265,6 +335,7 @@
     <!-- cdn js link -->
     <script src="https://cdn.tailwindcss.com"></script>
     <script src="https://kit.fontawesome.com/dd049e1eb4.js" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/flowbite@2.5.1/dist/flowbite.min.js"></script>
 </body>
 
 </html>
