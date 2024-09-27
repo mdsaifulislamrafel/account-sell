@@ -16,18 +16,21 @@
 <body>
     <!-- Loader Section -->
     <div id="loader">
-        <div class="dots">
+        <!-- <div class="dots">
             <div class="dot"></div>
             <div class="dot"></div>
             <div class="dot"></div>
             <div class="dot"></div>
         </div>
-        <p class="loading-text">Loading <span class="dots-animation">...</span></p>
+        <p class="loading-text">Loading <span class="dots-animation">...</span></p> -->
+        
+
+        <l-grid size="60" speed="1.5" color="black"></l-grid>
     </div>
     <!-- Loader Section -->
 
     <!-- auto add modal -->
-    <div>
+    <div id="autoAdd" style="display: none;">
         <dialog id="my_modal_2" class="modal">
             <div class="modal-box offer h-1/2 relative bg-slate-500">
                 <form method="dialog">
@@ -379,6 +382,8 @@
     <!-- cdn js link -->
     <script src="https://cdn.tailwindcss.com"></script>
     <script src="https://kit.fontawesome.com/dd049e1eb4.js" crossorigin="anonymous"></script>
+
+    <script type="module" src="https://cdn.jsdelivr.net/npm/ldrs/dist/auto/grid.js"></script>
 </body>
 
 </html>

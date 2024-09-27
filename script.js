@@ -1,7 +1,8 @@
 
 window.addEventListener('load', function() {
-    // setTimeout(function() {
+    setTimeout(function() {
         var loader = document.getElementById('loader');
+        var autoAdd = document.getElementById('autoAdd');
         var navbar = document.getElementById('navbar');
         var content = document.getElementById('content');
         var footer = document.getElementById('footer');
@@ -11,10 +12,13 @@ window.addEventListener('load', function() {
         navbar.style.display = 'block'; 
         content.style.display = 'block'; 
         footer.style.display = 'block'; 
-    // }, 5000); // 5000 milliseconds = 5 seconds
+        autoAdd.style.display = 'block'; gt
+    }, 2000); // 5000 milliseconds = 5 seconds
 });
 
 window.onload = function() {
     const modal = document.getElementById('my_modal_2');
     modal.showModal();
 }
+
+

@@ -1,200 +1,75 @@
-/* Body Styles */
-body, html {
-    margin: 0;
-    padding: 0;
-    font-family: Arial, sans-serif;
+/* General Styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 /* Loader Styles */
 #loader {
-    position: fixed;
-    width: 100%;
-    
-    height: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    background-color: #181818; /* Dark background color */
-    z-index: 9999; /* Ensures the loader is on top */
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  /* background-color: #181818; */
+  z-index: 9999;
 }
 
 .dots {
-    display: flex;
+  display: flex;
 }
 
 .dot {
-    width: 10px;
-    height: 10px;
-    background-color: #3498db; /* Blue color for dots */
-    margin: 0 5px;
-    border-radius: 50%;
-    animation: bounce 1s infinite;
+  width: 10px;
+  height: 10px;
+  background-color: #3498db;
+  margin: 0 5px;
+  border-radius: 50%;
+  animation: bounce 1s infinite;
 }
 
 .dot:nth-child(2) {
-    animation-delay: 0.2s;
+  animation-delay: 0.2s;
 }
 
 .dot:nth-child(3) {
-    animation-delay: 0.4s;
+  animation-delay: 0.4s;
 }
 
 .dot:nth-child(4) {
-    animation-delay: 0.6s;
+  animation-delay: 0.6s;
 }
 
 @keyframes bounce {
-    0%, 100% {
-        transform: translateY(0);
-    }
-    50% {
-        transform: translateY(-10px);
-    }
+  0%, 100% {
+      transform: translateY(0);
+  }
+  50% {
+      transform: translateY(-10px);
+  }
 }
 
 .loading-text {
-    margin-top: 10px;
-    font-size: 16px;
-    color: #3498db;
+  margin-top: 10px;
+  font-size: 16px;
+  color: #3498db;
 }
 
 .dots-animation {
-    animation: loading-dots 1s infinite;
+  animation: loading-dots 1s infinite;
 }
 
 @keyframes loading-dots {
-    0%, 100% {
-        content: '...';
-    }
-    33% {
-        content: '.';
-    }
-    66% {
-        content: '..';
-    }
+  0%, 100% {
+      content: '...';
+  }
+  33% {
+      content: '.';
+  }
+  66% {
+      content: '..';
+  }
 }
-
-/* Content Styles */
-#content {
-    text-align: center;
-    display: none;
-}
-
-
-
-
-/* From Uiverse.io by JaydipPrajapati1910 */ 
-.button {
-    --width: 100px;
-    --height: 35px;
-    --tooltip-height: 35px;
-    --tooltip-width: 90px;
-    --gap-between-tooltip-to-button: 18px;
-    --button-color: #222;
-    --tooltip-color: #fff;
-    width: var(--width);
-    height: var(--height);
-    background: var(--button-color);
-    position: relative;
-    text-align: center;
-    border-radius: 0.45em;
-    font-family: "Arial";
-    transition: background 0.3s;
-  }
-  
-  .button::before {
-    position: absolute;
-    content: attr(data-tooltip);
-    width: var(--tooltip-width);
-    height: var(--tooltip-height);
-    background-color: #555;
-    font-size: 0.9rem;
-    color: #fff;
-    border-radius: .25em;
-    line-height: var(--tooltip-height);
-    bottom: calc(var(--height) + var(--gap-between-tooltip-to-button) + 10px);
-    left: calc(50% - var(--tooltip-width) / 2);
-  }
-  
-  .button::after {
-    position: absolute;
-    content: '';
-    width: 0;
-    height: 0;
-    border: 10px solid transparent;
-    border-top-color: #555;
-    left: calc(50% - 10px);
-    bottom: calc(100% + var(--gap-between-tooltip-to-button) - 10px);
-  }
-  
-  .button::after,.button::before {
-    opacity: 0;
-    visibility: hidden;
-    transition: all 0.5s;
-  }
-  
-  .text {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-  }
-  
-  .button-wrapper,.text,.icon {
-    overflow: hidden;
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    left: 0;
-    color: #fff;
-  }
-  
-  .text {
-    top: 0
-  }
-  
-  .text,.icon {
-    transition: top 0.5s;
-  }
-  
-  .icon {
-    color: #fff;
-    top: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-  }
-  
-  .icon svg {
-    width: 24px;
-    height: 24px;
-  }
-  
-  .button:hover {
-    background: #222;
-  }
-  
-  .button:hover .text {
-    top: -100%;
-  }
-  
-  .button:hover .icon {
-    top: 0;
-  }
-  
-  .button:hover:before,.button:hover:after {
-    opacity: 1;
-    visibility: visible;
-  }
-  
-  .button:hover:after {
-    bottom: calc(var(--height) + var(--gap-between-tooltip-to-button) - 20px);
-  }
-  
-  .button:hover:before {
-    bottom: calc(var(--height) + var(--gap-between-tooltip-to-button));
-  }
-  
-  
-  
-  
