@@ -26,7 +26,8 @@ window.onload = function() {
 
 
 
-// script.js
+/* contact menu sticky */
+
 document.addEventListener('DOMContentLoaded', () => {
     const iconContainer = document.getElementById('icon-container');
     const icon = document.getElementById('icon');
@@ -58,6 +59,12 @@ document.addEventListener('DOMContentLoaded', () => {
         iconContainer.innerHTML = `<i id="icon" class="fas fa-envelope text-2xl"></i>`;
     });
 });
+
+/* contact menu sticky */
+
+
+
+
 
 
 

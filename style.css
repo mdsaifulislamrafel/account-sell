@@ -27,6 +27,7 @@
 }
 
 
+/* contact menu sticky */
 @keyframes rotate360 {
   from {
     transform: rotate(0deg);
@@ -39,3 +40,5 @@
 .rotate-360 {
   animation: rotate360 0.5s ease-in-out;
 }
+
+/* contact menu sticky */
