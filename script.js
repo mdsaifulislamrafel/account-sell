@@ -1,6 +1,6 @@
 
 window.addEventListener('load', function() {
-    setTimeout(function() {
+    // setTimeout(function() {
         var loader = document.getElementById('loader');
         var autoAdd = document.getElementById('autoAdd');
         var navbar = document.getElementById('navbar');
@@ -12,8 +12,8 @@ window.addEventListener('load', function() {
         navbar.style.display = 'block'; 
         content.style.display = 'block'; 
         footer.style.display = 'block'; 
-        autoAdd.style.display = 'block'; gt
-    }, 2000); // 5000 milliseconds = 5 seconds
+        autoAdd.style.display = 'block'; 
+    // }, 2000); // 2000 milliseconds = 2 seconds
 });
 
 window.onload = function() {
