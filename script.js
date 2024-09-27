@@ -1,6 +1,6 @@
 
 window.addEventListener('load', function() {
-    // setTimeout(function() {
+    setTimeout(function() {
         var loader = document.getElementById('loader');
         var autoAdd = document.getElementById('autoAdd');
         var navbar = document.getElementById('navbar');
@@ -13,7 +13,7 @@ window.addEventListener('load', function() {
         content.style.display = 'block'; 
         footer.style.display = 'block'; 
         autoAdd.style.display = 'block'; 
-    // }, 2000); // 2000 milliseconds = 2 seconds
+    }, 2000); // 2000 milliseconds = 2 seconds
 });
 
 window.onload = function() {
