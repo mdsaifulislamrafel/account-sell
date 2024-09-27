@@ -18,39 +18,8 @@
   z-index: 9999;
 }
 
-.dots {
-  display: flex;
-}
 
-.dot {
-  width: 10px;
-  height: 10px;
-  background-color: #3498db;
-  margin: 0 5px;
-  border-radius: 50%;
-  animation: bounce 1s infinite;
-}
 
-.dot:nth-child(2) {
-  animation-delay: 0.2s;
-}
-
-.dot:nth-child(3) {
-  animation-delay: 0.4s;
-}
-
-.dot:nth-child(4) {
-  animation-delay: 0.6s;
-}
-
-@keyframes bounce {
-  0%, 100% {
-      transform: translateY(0);
-  }
-  50% {
-      transform: translateY(-10px);
-  }
-}
 
 .loading-text {
   margin-top: 10px;
@@ -62,14 +31,4 @@
   animation: loading-dots 1s infinite;
 }
 
-@keyframes loading-dots {
-  0%, 100% {
-      content: '...';
-  }
-  33% {
-      content: '.';
-  }
-  66% {
-      content: '..';
-  }
-}
+
