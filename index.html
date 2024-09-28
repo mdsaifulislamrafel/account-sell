@@ -116,7 +116,8 @@
                                     <li><a>Facebook accounts guidelines</a></li>
                                     <li><a>Software and Services</a></li>
                                     <li><a>Software and Services</a></li>
-                                    <li><a>Checking the date and IP address of the registration of gmail.com accounts</a></li>
+                                    <li><a>Checking the date and IP address of the registration of gmail.com
+                                            accounts</a></li>
                                 </ul>
                             </li>
                             <li><a>Item 3</a></li>
@@ -853,6 +854,72 @@
                             class="text-indigo-500 underline">click here</a>.
                     </p>
                 </div>
+            </div>
+        </section>
+
+        <!-- ask a question section -->
+        <section class="bg-gray-100">
+            <div class="max-w-2xl mx-auto p-8">
+                <h2 class="text-3xl font-bold text-gray-800 mb-8 text-center">New Ticket</h2>
+                <form action="#" method="POST" class="bg-white p-6 rounded-lg shadow-lg space-y-4">
+                    <div>
+                        <label for="subject" class="block text-gray-700 font-medium">Subject</label>
+                        <select id="subject"
+                            class="w-full mt-1 p-2 border rounded-lg text-gray-700 focus:outline-none focus:border-blue-500">
+                            <option>I have problems with the product</option>
+                            <option>I have a question</option>
+                            <option>I need support</option>
+                        </select>
+                    </div>
+
+                    <div>
+                        <label for="email" class="block text-gray-700 font-medium">Email <span
+                                class="text-red-500">*</span></label>
+                        <input type="email" id="email"
+                            class="w-full mt-1 p-2 border rounded-lg text-gray-700 focus:outline-none focus:border-blue-500"
+                            required>
+                        <div class="flex items-center mt-2">
+                            <input type="checkbox" id="notify" class="mr-2">
+                            <label for="notify" class="text-gray-600">Notify new messages</label>
+                        </div>
+                    </div>
+
+                    <div>
+                        <label for="order" class="block text-gray-700 font-medium"># Order <span
+                                class="text-red-500">*</span></label>
+                        <input type="text" id="order"
+                            class="w-full mt-1 p-2 border rounded-lg text-gray-700 focus:outline-none focus:border-blue-500"
+                            required>
+                    </div>
+
+                    <div>
+                        <label for="proxy" class="block text-gray-700 font-medium">What proxy was used</label>
+                        <textarea id="proxy" rows="2"
+                            class="w-full mt-1 p-2 border rounded-lg text-gray-700 focus:outline-none focus:border-blue-500"></textarea>
+                    </div>
+
+                    <div>
+                        <label for="accounts" class="block text-gray-700 font-medium">How did you check your purchased
+                            accounts?</label>
+                        <textarea id="accounts" rows="2"
+                            class="w-full mt-1 p-2 border rounded-lg text-gray-700 focus:outline-none focus:border-blue-500"></textarea>
+                    </div>
+
+                    <div>
+                        <label for="message" class="block text-gray-700 font-medium">Message</label>
+                        <textarea id="message" rows="4"
+                            class="w-full mt-1 p-2 border rounded-lg text-gray-700 focus:outline-none focus:border-blue-500"></textarea>
+                    </div>
+
+                    <button type="submit"
+                        class="w-full bg-green-500 text-white p-3 rounded-lg font-medium hover:bg-green-600 focus:outline-none">Send</button>
+                </form>
+                <p class="text-sm text-gray-600 mt-4 text-center">
+                    If you have any problems with the ticket system or haven't received an answer, please email us at <a
+                        href="mailto:support@accsmarket.com"
+                        class="text-blue-500 hover:underline">support@accsmarket.com</a>.<br>
+                    Technical support is provided in English.
+                </p>
             </div>
         </section>
 
