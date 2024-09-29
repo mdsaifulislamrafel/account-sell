@@ -62,4 +62,26 @@ document.addEventListener('DOMContentLoaded', () => {
 
 /* contact menu sticky */
 
+// Add event listener to the button
+// Get the advanced search button and section
+const advancedSearchButton = document.getElementById('advancedSearchButton');
+const advancedSearchSection = document.getElementById('advancedSearchSection');
+
+// Add event listener to the button
+advancedSearchButton.addEventListener('click', function () {
+    // Toggle the visibility of the advanced search section with smooth transition
+    if (advancedSearchSection.classList.contains('hidden')) {
+        advancedSearchSection.classList.remove('hidden');
+        advancedSearchSection.style.maxHeight = advancedSearchSection.scrollHeight + 'px';
+        advancedSearchSection.style.opacity = '1';
+        advancedSearchSection.style.transform = 'translateY(0)';
+    } else {
+        advancedSearchSection.style.maxHeight = '0';
+        advancedSearchSection.style.opacity = '0';
+        advancedSearchSection.style.transform = 'translateY(-20px)';
+        setTimeout(() => {
+            advancedSearchSection.classList.add('hidden');
+        }, 300); // Delay to let the animation finish before hiding
+    }
+});
 

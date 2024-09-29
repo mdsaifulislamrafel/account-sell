@@ -129,50 +129,41 @@
 
     <!-- header section -->
     <main id="content" style="display: none;" class="min-h-[calc(100vh-324px)] mt-[110px] ">
+
         <!-- search section -->
         <section class="md:p-6 bg-white shadow-md rounded-lg my-10">
             <div class="w-[90%] mx-auto flex justify-between items-center md:space-x-8">
-
                 <!-- Left Side (ACCS and market.com) -->
                 <div class="flex items-center space-x-2 hidden md:flex">
                     <button class="bg-red-600 text-white font-bold px-4 py-2 rounded-lg">ACCS</button>
                     <span class="text-gray-700 text-lg font-medium">mailbox.com</span>
                 </div>
-
-                <select
-                    class="select select-bordered bg-green-500 text-white w-full md:w-fit transition-all duration-300 ease-in-out">
+        
+                <select class="select select-bordered bg-green-500 text-white w-full md:w-fit transition-all duration-300 ease-in-out my-5">
                     <option disabled selected>Select a category</option>
                     <option>Han Solo</option>
                     <option>Greedo</option>
                 </select>
-
+        
                 <!-- Right Side (Search and Advanced Search) -->
                 <div class="md:flex hidden md:items-center md:space-x-2 md:w-full">
-
                     <!-- Search Bar -->
                     <div class="relative hidden md:flex w-full join">
-                        <input type="text"
-                            class="border border-gray-300 pl-10 pr-4 py-2 w-full focus:outline-none focus:ring-2 focus:ring-green-500"
-                            placeholder="Search for accounts">
-                        <svg class="w-5 h-5 text-gray-400 absolute left-3 top-3" xmlns="http://www.w3.org/2000/svg"
-                            fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                d="M15 11a4 4 0 11-8 0 4 4 0 018 0z" />
+                        <input type="text" class="border border-gray-300 pl-10 pr-4 py-2 w-full focus:outline-none focus:ring-2 focus:ring-green-500" placeholder="Search for accounts">
+                        <svg class="w-5 h-5 text-gray-400 absolute left-3 top-3" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a4 4 0 11-8 0 4 4 0 018 0z" />
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M22 22l-6-6" />
                         </svg>
-                        <button class="bg-green-500 w-[200px] text-sm text-white px-4 py-2">Advanced search</button>
+                        <button id="advancedSearchButton" class="bg-green-500 w-[200px] text-sm text-white px-4 py-2">Advanced search</button>
                     </div>
-
                 </div>
-
             </div>
         </section>
         <!-- search advanced section -->
-        <section>
-            <div class="max-w-7xl mx-auto px-4 py-8">
+        <section id="advancedSearchSection" class="hidden">
+            <div class="max-w-7xl mx-auto px-4 mb-5">
                 <div class="bg-white p-6 rounded-lg shadow-lg">
                     <h2 class="text-lg font-semibold text-gray-800 mb-4">ADVANCED ACCOUNT SEARCH</h2>
-
                     <!-- Form -->
                     <form class="space-y-4">
                         <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
@@ -180,39 +171,31 @@
                             <div>
                                 <label class="block text-sm font-medium text-gray-700">Price accounts:</label>
                                 <div class="flex space-x-2 mt-1">
-                                    <input type="number" placeholder="from"
-                                        class="w-full border border-gray-300 px-4 py-2 rounded-md focus:ring-green-500 focus:border-green-500" />
+                                    <input type="number" placeholder="from" class="w-full border border-gray-300 px-4 py-2 rounded-md focus:ring-green-500 focus:border-green-500" />
                                     <span class="self-center">-</span>
-                                    <input type="number" placeholder="to"
-                                        class="w-full border border-gray-300 px-4 py-2 rounded-md focus:ring-green-500 focus:border-green-500" />
+                                    <input type="number" placeholder="to" class="w-full border border-gray-300 px-4 py-2 rounded-md focus:ring-green-500 focus:border-green-500" />
                                     <span class="self-center">$</span>
                                 </div>
                             </div>
-
+        
                             <!-- Number of Products in Stock -->
                             <div>
-                                <label class="block text-sm font-medium text-gray-700">Number of products in
-                                    stock:</label>
+                                <label class="block text-sm font-medium text-gray-700">Number of products in stock:</label>
                                 <div class="flex space-x-2 mt-1">
-                                    <input type="number" placeholder="from"
-                                        class="w-full border border-gray-300 px-4 py-2 rounded-md focus:ring-green-500 focus:border-green-500" />
+                                    <input type="number" placeholder="from" class="w-full border border-gray-300 px-4 py-2 rounded-md focus:ring-green-500 focus:border-green-500" />
                                     <span class="self-center">-</span>
-                                    <input type="number" placeholder="to"
-                                        class="w-full border border-gray-300 px-4 py-2 rounded-md focus:ring-green-500 focus:border-green-500" />
+                                    <input type="number" placeholder="to" class="w-full border border-gray-300 px-4 py-2 rounded-md focus:ring-green-500 focus:border-green-500" />
                                     <span class="self-center">pcs.</span>
                                 </div>
                             </div>
                         </div>
-
+        
                         <!-- Reset and Search Buttons -->
                         <div class="flex justify-between items-center mt-4">
                             <button type="reset" class="text-red-500 underline">Reset settings</button>
-                            <button type="submit"
-                                class="bg-green-500 hover:bg-green-600 text-white font-bold py-2 px-4 rounded-md flex items-center space-x-2">
-                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
-                                    stroke="currentColor" class="w-5 h-5">
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                        d="M10 6a4 4 0 100 8 4 4 0 000-8zm0 0L16 16" />
+                            <button type="submit" class="bg-green-500 hover:bg-green-600 text-white font-bold py-2 px-4 rounded-md flex items-center space-x-2">
+                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" class="w-5 h-5">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6a4 4 0 100 8 4 4 0 000-8zm0 0L16 16" />
                                 </svg>
                                 <span>Search</span>
                             </button>
@@ -221,6 +204,8 @@
                 </div>
             </div>
         </section>
+        
+
 
         <!-- item section -->
         <section class="w-[90%] mx-auto">

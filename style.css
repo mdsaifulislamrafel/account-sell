@@ -42,3 +42,12 @@
 }
 
 /* contact menu sticky */
+
+/* You can add some smooth transitions */
+#advancedSearchSection {
+  max-height: 0;
+  opacity: 0;
+  transform: translateY(-20px);
+  overflow: hidden;
+  transition: max-height 0.3s ease, opacity 0.3s ease, transform 0.3s ease;
+}
