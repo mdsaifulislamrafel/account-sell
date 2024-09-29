@@ -73,25 +73,23 @@
                 </div>
                 <!-- desktop menu -->
                 <div class="navbar-center hidden lg:flex">
-                    <ul class="menu menu-horizontal px-1">
-                        <li><a>Terms of use</a></li>
+                    <ul class="menu menu-horizontal px-2">
+                        <li><a class="px-2 py-[14.5px] mr-2 bg-white">Terms of use</a></li>
                         <li>
-                            <details>
-                                <summary>Useful information</summary>
-                                <ul class="p-2 w-[300px] text-right">
-                                    <li><a> Check Instagram account email</a></li>
-                                    <li><a>2FA. Two-factor authentification</a></li>
-                                    <li><a>Facebook accounts guidelines</a></li>
-                                    <li><a>Software and Services</a></li>
-                                    <li><a>Software and Services</a></li>
-                                    <li><a>Checking the date and IP address of the registration of gmail.com
-                                            accounts</a></li>
+                            <select class="select w-full  md:w-[160px] ">
+                                <option disabled selected class="bg-none">Select a category </option>
+                                <option><a> Check Instagram account email</a></option>
+                                <option><a>2FA. Two-factor authentification</a></option>
+                                <option><a>Facebook accounts guidelines</a></option>
+                                <option><a>Software and Services</a></option>
+                                <option><a>Software and Services</a></option>
+                                <option><a>Checking the date and IP address of the registration of gmail.com
+                                        accounts</a></option>
+                            </select>
 
-                                </ul>
-                            </details>
                         </li>
-                        <li><a>FAQ</a></li>
-                        <li><a>Home</a></li>
+                        <li><a class="px-2 py-[14.5px] mx-2 w-14 bg-white">FAQ</a></li>
+                        <li><a class="px-2 py-[14.5px] bg-white">Home</a></li>
                     </ul>
                 </div>
                 <div class="navbar-end">
@@ -110,15 +108,16 @@
                             <li><a>Home</a></li>
                             <li>
                                 <a>Parent</a>
-                                <ul class="p-2 w-[200px] space-y-2">
-                                    <li><a> Check Instagram account email</a></li>
-                                    <li><a>2FA. Two-factor authentification</a></li>
-                                    <li><a>Facebook accounts guidelines</a></li>
-                                    <li><a>Software and Services</a></li>
-                                    <li><a>Software and Services</a></li>
-                                    <li><a>Checking the date and IP address of the registration of gmail.com
-                                            accounts</a></li>
-                                </ul>
+                                <select class="select w-full  md:w-[160px] mr-2">
+                                    <option disabled selected class="bg-none">Select a category </option>
+                                    <option><a> Check Instagram account email</a></option>
+                                    <option><a>2FA. Two-factor authentification</a></option>
+                                    <option><a>Facebook accounts guidelines</a></option>
+                                    <option><a>Software and Services</a></option>
+                                    <option><a>Software and Services</a></option>
+                                    <option><a>Checking the date and IP address of the registration of gmail.com
+                                            accounts</a></option>
+                                </select>
                             </li>
                             <li><a>Item 3</a></li>
                         </ul>
@@ -166,6 +165,60 @@
 
                 </div>
 
+            </div>
+        </section>
+        <!-- search advanced section -->
+        <section>
+            <div class="max-w-7xl mx-auto px-4 py-8">
+                <div class="bg-white p-6 rounded-lg shadow-lg">
+                    <h2 class="text-lg font-semibold text-gray-800 mb-4">ADVANCED ACCOUNT SEARCH</h2>
+
+                    <!-- Form -->
+                    <form class="space-y-4">
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                            <!-- Price Accounts -->
+                            <div>
+                                <label class="block text-sm font-medium text-gray-700">Price accounts:</label>
+                                <div class="flex space-x-2 mt-1">
+                                    <input type="number" placeholder="from"
+                                        class="w-full border border-gray-300 px-4 py-2 rounded-md focus:ring-green-500 focus:border-green-500" />
+                                    <span class="self-center">-</span>
+                                    <input type="number" placeholder="to"
+                                        class="w-full border border-gray-300 px-4 py-2 rounded-md focus:ring-green-500 focus:border-green-500" />
+                                    <span class="self-center">$</span>
+                                </div>
+                            </div>
+
+                            <!-- Number of Products in Stock -->
+                            <div>
+                                <label class="block text-sm font-medium text-gray-700">Number of products in
+                                    stock:</label>
+                                <div class="flex space-x-2 mt-1">
+                                    <input type="number" placeholder="from"
+                                        class="w-full border border-gray-300 px-4 py-2 rounded-md focus:ring-green-500 focus:border-green-500" />
+                                    <span class="self-center">-</span>
+                                    <input type="number" placeholder="to"
+                                        class="w-full border border-gray-300 px-4 py-2 rounded-md focus:ring-green-500 focus:border-green-500" />
+                                    <span class="self-center">pcs.</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Reset and Search Buttons -->
+                        <div class="flex justify-between items-center mt-4">
+                            <button type="reset" class="text-red-500 underline">Reset settings</button>
+                            <button type="submit"
+                                class="bg-green-500 hover:bg-green-600 text-white font-bold py-2 px-4 rounded-md flex items-center space-x-2">
+                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                                    stroke="currentColor" class="w-5 h-5">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M10 6a4 4 0 100 8 4 4 0 000-8zm0 0L16 16" />
+                                </svg>
+                                <span>Search</span>
+                            </button>
+                        </div>
+                    </form>
+                </div>
             </div>
         </section>
 
@@ -337,6 +390,76 @@
                     </div>
                 </div>
 
+            </div>
+        </section>
+
+        <!-- item details -->
+        <section class="bg-gray-100 text-gray-800">
+            <div class="max-w-6xl mx-auto p-4">
+                <!-- Card Wrapper -->
+                <div class="bg-white shadow-lg rounded-lg p-6 flex flex-col md:flex-row gap-5">
+                    <!-- Left Section: Image -->
+                    <div class="flex justify-around md:flex-col items-center">
+                        <img class="w-16 h-16"
+                            src="https://w7.pngwing.com/pngs/758/665/png-transparent-new-logo-gmail-google-new-logos-icon-thumbnail.png"
+                            alt="Gmail logo">
+                        <div class="mt-6 p-4">
+                            <div class="space-y-2">
+                                <p class="font-bold">In stock</p>
+                                <p>1 392 pcs.</p>
+                                <p class="font-bold">Price for each</p>
+                                <p>from 0,387 $</p>
+                                <button class="btn bg-green-500 text-white" onclick="my_modal_3.showModal()"><i
+                                        class="fa-solid fa-cart-arrow-down"></i> Buy</button>
+                            </div>
+
+                        </div>
+                    </div>
+
+                    <!-- Right Section: Content -->
+                    <div class="flex flex-col md:w-3/4">
+                        <h1 class="text-2xl font-bold mb-4">
+                            Gmail Accounts | The accounts were registered in 05.2024. Accounts might be used for some of
+                            the services.
+                        </h1>
+
+                        <ul class="list-disc ml-5 mb-4 text-gray-700">
+                            <li>The Gmail accounts are registered automatically.</li>
+                            <li>The accounts were registered in 05.2024.</li>
+                            <li>The accounts might be used for some of the services.</li>
+                            <li>There is an additional email address (without a password).</li>
+                            <li>Accounts are registered in IP addresses of different countries.</li>
+                            <li>Male or female.</li>
+                        </ul>
+
+                        <div class="text-red-500 font-bold mb-2">
+                            Important: Any Gmail account may require SMS confirmation when logging in or working. It is
+                            considered to be ok. You can confirm the account by your phone number or any SMS activation
+                            services.
+                        </div>
+
+                        <div class="text-sm mb-4">
+                            <span class="font-semibold">Accounts data format:</span> The data format is specified to
+                            facilitate reading the received details and may differ slightly. It does not affect an
+                            account’s health.
+                            <p class="font-mono bg-gray-100 p-2 rounded-md inline-block mt-2">
+                                login:password:additional email login
+                            </p>
+                        </div>
+
+                        <!-- Recommendations Section -->
+                        <div>
+                            <h2 class="font-bold">Recommendations for purchase:</h2>
+                            <ul class="list-disc ml-5 mt-2">
+                                <li>First buy a small number of accounts (up to 10) and check them.</li>
+                                <li><a href="#" class="text-blue-500 hover:underline">Recommendations for using
+                                        accounts</a></li>
+                                <li><a href="#" class="text-blue-500 hover:underline">With which services you can work
+                                        with accounts</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
             </div>
         </section>
 
@@ -593,6 +716,76 @@
                     </div>
                 </div>
             </div>
+        </section>
+
+        <!-- Terms of Use section -->
+        <section class="bg-white p-8 rounded-lg shadow-lg">
+            <div class="bg-blue-600 text-white py-4">
+                <div class="container mx-auto text-center">
+                    <h1 class="text-3xl font-bold">Terms of Use</h1>
+                    <p class="mt-2">Last Updated: September 2024</p>
+                </div>
+            </div>
+            <h2 class="text-2xl font-semibold my-4">1. Terms of Use</h2>
+            <p class="mb-4">Welcome to loskamailbox.xyz. By using our service, you agree to the following terms and
+                conditions.</p>
+
+            <h3 class="text-xl font-semibold mt-6 mb-2">1.1. loskamailbox.xyz service GUARANTEES:</h3>
+            <ul class="list-disc list-inside mb-4">
+                <li>The full validity of the account (within 48 hours after the purchase), according to all the rules
+                    described in the Terms of Use and at <a href="https://accsmarket.com/en/recommendations"
+                        class="text-blue-500 underline">https://accsmarket.com/en/recommendations</a>;</li>
+                <li>Sale of accounts in the hands;</li>
+                <li>Replacing accounts in case of invalidity due to loskamailbox.xyz store fault, including blocked,
+                    deleted, or incorrect credentials;</li>
+                <li>Refund if an invalid account cannot be replaced. Refunds are made only to Perfect Money, Advcash,
+                    WebMoney, or Litecoin.</li>
+            </ul>
+
+            <h3 class="text-xl font-semibold mt-6 mb-2">1.2. Forbidden Use:</h3>
+            <p class="mb-4">The following uses are strictly prohibited for accounts purchased from loskamailbox.xyz:</p>
+            <ul class="list-disc list-inside mb-4">
+                <li>Using your original (local, home) IP address;</li>
+                <li>Using VPN services (paid, free, or built-in);</li>
+                <li>Using an anonymous TOR browser;</li>
+                <li>Using virtual machines, device emulators, or servers (VPS, VDS);</li>
+                <li>Using IPv6 proxies, common or public proxies;</li>
+                <li>Using proxies or devices obtained illegally (botnets, etc.);</li>
+                <li>Logging into multiple accounts with one device or one proxy;</li>
+                <li>Using programs like Sobot, proxymania.ru, keyproxy.net, 911.re, instap.ru;</li>
+                <li>Using accounts to harm others or commit illegal activities (bullying, spam, fraud, etc.).</li>
+            </ul>
+
+            <h3 class="text-xl font-semibold mt-6 mb-2">1.3. Responsibility:</h3>
+            <ul class="list-disc list-inside mb-4">
+                <li>loskamailbox.xyz does not provide training or advice;</li>
+                <li>loskamailbox.xyz does not store account history or data;</li>
+                <li>Paid orders can be downloaded for 30 days after purchase;</li>
+                <li>loskamailbox.xyz has the right not to change valid accounts or refund purchases after inattentive
+                    buying;</li>
+                <li>Accounts are blocked if buyers engage in prohibited actions (spam, negative reviews, or rudeness).
+                </li>
+            </ul>
+
+            <h3 class="text-xl font-semibold mt-6 mb-2">1.4. Client Responsibility:</h3>
+            <ul class="list-disc list-inside mb-4">
+                <li>Clients must read the detailed account descriptions;</li>
+                <li>Clients are responsible for changing account passwords and maintaining security;</li>
+                <li>Responsibility transfers to the buyer after purchase;</li>
+                <li>Guarantees are void if any prohibited uses occur.</li>
+            </ul>
+
+            <h3 class="text-xl font-semibold mt-6 mb-2">1.5. Additional Information for Suppliers:</h3>
+            <p class="mb-4">loskamailbox.xyz blocks suppliers with more than one account and transfers their funds as
+                penalties. No refunds are given in such cases.</p>
+
+            <p class="mt-6">For further information, please visit: <a href="https://accsmarket.com/en/info"
+                    class="text-blue-500 underline">Useful Info</a> and <a href="https://accsmarket.com/en/faq"
+                    class="text-blue-500 underline">FAQ</a>.</p>
+
+            <h3 class="text-xl font-semibold mt-6 mb-2">Disclaimer:</h3>
+            <p>loskamailbox.xyz is an intermediary between account sellers and buyers. We are not responsible for
+                illegal activity conducted using the accounts. We do not endorse spam or fraud.</p>
         </section>
 
         <!-- Privacy Policy Content Section -->
